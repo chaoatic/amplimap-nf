@@ -1,0 +1,10 @@
+# Mac OS
+.DS_Store
+
+# Nextflow temporary files
+work
+.nextflow*
+
+# Nextflow result folder
+result
+data
