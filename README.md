@@ -1,15 +1,21 @@
 # amplimap-nf
-Pipeline for mapping amplicon reads to dna sequence database.
+**AmpliMap** is a bioinformatic pipeline for mapping amplicon reads to a DNA database. This pipeline is based on Nextflow.
+
 ## Getting started
+
 ### Prerequisites
 - [Nextflow](https://nf-co.re/docs/usage/installation)
-- [Conda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html)
+- [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) or [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html)
+
 ### Installation
-```
+
+```shell
 git clone https://github.com/chaoatic/amplimap-nf.git
 cd amplimap-nf
 ```
+
 ### Usage
+
 ```
 Usage: nextflow run amplimap.nf [OPTION...]
 
@@ -28,7 +34,25 @@ Optional arguments:
     --threads       Number of parallel threads to use
                     [Default: 4]
 ```
+
+### Example usage
+
+```shell
+nextflow run amplimap.nf \
+    --data_dir "/DATA/DIRECTORY" \
+    --db DB.fasta \
+    --result_dir "/RESULT/DIRECTORY" \
+    --min_length 500 \
+    --max_length 1000 \
+    --min_qscore 10 \
+    --threads 4
+```
+
 ## Overview of the pipeline
+
 ## Database
+
 ## Output
+
 ## Citations
+If you use this pipeline please cite:
