@@ -1,5 +1,6 @@
 # amplimap-nf
-**AmpliMap** is a bioinformatic pipeline for mapping amplicon reads to a DNA database. This pipeline is based on Nextflow.
+
+**AmpliMap** is a bioinformatic pipeline for aligning amplicon reads to a DNA database. This pipeline is based on Nextflow.
 
 ## Getting started
 
@@ -37,7 +38,7 @@ Optional arguments:
 
 ### Example usage
 
-```shell
+```
 nextflow run amplimap.nf \
     --data_dir "/DATA/DIRECTORY" \
     --db DB.fasta \
@@ -48,11 +49,26 @@ nextflow run amplimap.nf \
     --threads 4
 ```
 
-## Overview of the pipeline
+## Overview
 
-## Database
+![amplimap pipeline flowchart](./figures/flowchart.png "amplimap pipeline flowchart")
 
-## Output
+This pipeline is composed of a set of processes to compare amplicon reads against a reference database, then produce a coverage report for each sample.
 
-## Citations
+- **concatenateFastq**: import all fastq files and concatenate them together into each barcode.
+- **rawSequenceVisualization**: produce graphs and data visualizations of raw read sequences for each barcode.
+- **filterFastq**: filter reads according to parameters provided.
+- **filterSequenceVisualization**: produce graphs and data visualizations of filtered read sequences.
+- **generateSequenceReport**: generate statistic report of each barcode sequence.
+- **generateCoverageReport** generate coverage report of each barcode sequence.
+
+## Citation
+
 If you use this pipeline please cite:
+
+- Wouter De Coster, Rosa Rademakers, NanoPack2: population-scale evaluation of long-read sequencing data, *Bioinformatics*, Volume 39, Issue 5, May 2023, btad311, https://doi.org/10.1093/bioinformatics/btad311
+- Heng Li, Minimap2: pairwise alignment for nucleotide sequences, *Bioinformatics*, Volume 34, Issue 18, September 2018, Pages 3094–3100, https://doi.org/10.1093/bioinformatics/bty191
+- Shen W, Le S, Li Y, Hu F (2016) SeqKit: A Cross-Platform and Ultrafast Toolkit for FASTA/Q File Manipulation. PLOS ONE 11(10): e0163962. https://doi.org/10.1371/journal.pone.0163962
+- Twelve years of SAMtools and BCFtools
+Petr Danecek, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, Thomas Keane, Shane A McCarthy, Robert M Davies, Heng Li
+*GigaScience*, Volume 10, Issue 2, February 2021, giab008, https://doi.org/10.1093/gigascience/giab008

@@ -4,7 +4,5 @@
 # Nextflow temporary files
 work
 .nextflow*
-
-# Nextflow result folder
-result
 data
+result
