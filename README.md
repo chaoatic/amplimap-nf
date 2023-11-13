@@ -5,8 +5,9 @@
 ## Getting started
 
 ### Prerequisites
+
 - [Nextflow](https://nf-co.re/docs/usage/installation)
-- [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) or [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html)
+- [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) or [Mamba](https://mamba.readthedocs.io/en/latest/mamba-installation.html)
 
 ### Installation
 
@@ -64,7 +65,7 @@ This pipeline is composed of a set of processes to compare amplicon reads agains
 
 ## Citation
 
-If you use this pipeline please cite:
+If you use AmpliMap please cite:
 
 - Wouter De Coster, Rosa Rademakers, NanoPack2: population-scale evaluation of long-read sequencing data, *Bioinformatics*, Volume 39, Issue 5, May 2023, btad311, https://doi.org/10.1093/bioinformatics/btad311
 - Heng Li, Minimap2: pairwise alignment for nucleotide sequences, *Bioinformatics*, Volume 34, Issue 18, September 2018, Pages 3094–3100, https://doi.org/10.1093/bioinformatics/bty191

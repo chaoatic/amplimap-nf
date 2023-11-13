@@ -1,0 +1,11 @@
+name: amplimap-env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - chopper
+  - nanoplot
+  - seqkit
+  - samtools
+  - minimap2
